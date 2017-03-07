@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lizhenbo.planewar.MenuActivity">
+
+    <ImageView
+        android:id="@+id/imageview_menu_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageview_menu_logo"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        />
+
+    <ImageView
+        android:id="@+id/imageview_menu_hero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/imageview_menu_logo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon"
+        />
+
+    <Button
+        android:id="@+id/btn_menu_start"
+        android:layout_below="@id/imageview_menu_hero"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        style="@style/menu_btn_style"
+        android:text="开始游戏"
+        />
+    <Button
+        android:id="@+id/btn_menu_rank"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_menu_start"
+        android:layout_marginTop="20dp"
+        style="@style/menu_btn_style"
+        android:text="游戏排行"
+        />
+    <Button
+        android:id="@+id/btn_menu_set"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_menu_rank"
+        android:layout_marginTop="20dp"
+        style="@style/menu_btn_style"
+        android:text="游戏设置"
+        />
+    <Button
+        android:id="@+id/btn_menu_about"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_menu_set"
+        android:layout_marginTop="20dp"
+        style="@style/menu_btn_style"
+        android:text="游戏简介"
+        />
+
+</RelativeLayout>

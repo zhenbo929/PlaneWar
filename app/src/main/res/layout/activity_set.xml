@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lizhenbo.planewar.SetActivity">
+
+    <ImageView
+        android:id="@+id/imageview_set_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/textview_set_volume_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游戏音量："
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="32sp" />
+
+
+    <TextView android:id="@+id/textview_set_volume_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_set_volume_title"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:text="开关"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox_set_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_set_volume_title"
+        android:layout_alignBaseline="@id/textview_set_volume_on_off"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/textview_set_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_set_volume_on_off"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:text="音量" />
+
+    <SeekBar
+        android:id="@+id/seekbar_set_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/textview_set_volume"
+        />
+
+    <TextView
+        android:id="@+id/textview_set_gamelevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_set_volume"
+        android:text="游戏难度："
+        android:layout_margin="10dp"
+        android:textSize="32sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_set_gamelevl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/textview_set_gamelevel" >
+
+        <RadioButton
+            android:id="@+id/radio0_set_gamelevl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/myradiobtn_selector"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="简单" />
+
+        <RadioButton
+            android:id="@+id/radio1_set_gamelevl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/myradiobtn_selector"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="一般" />
+
+        <RadioButton
+            android:id="@+id/radio2_set_gamelevl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/myradiobtn_selector"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="困难" />
+    </RadioGroup>
+
+
+</RelativeLayout>

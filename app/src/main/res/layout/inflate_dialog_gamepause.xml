@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <Button 
+        android:id="@+id/btn_pause_continue"
+        android:layout_centerHorizontal="true"
+        style="@style/menu_btn_style"
+        android:text="继续游戏"
+        />
+    <Button 
+        android:id="@+id/btn_pause_backmenu"
+        android:layout_centerHorizontal="true"
+		android:layout_below="@id/btn_pause_continue"
+		android:layout_marginTop="20dp"
+        style="@style/menu_btn_style"
+        android:text="返回菜单"
+        />
+
+</RelativeLayout>
