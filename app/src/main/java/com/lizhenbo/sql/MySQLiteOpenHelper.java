@@ -11,19 +11,19 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
 	public MySQLiteOpenHelper(Context context) {
 		super(context,"score.db", null, 1);
 	}
-	/**�������ݿ�ʱִ�У���ִֻ��һ��,һ�����
-	 * �˷����д���һЩ��*/
+	/**创建数据库时执行，且只执行一次,一般会在
+	 * 此方法中创建一些表*/
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String sql="create table score_table(_id integer primary key autoincrement,name text,score long not null)";
 		db.execSQL(sql);
 	}
-	/**���ݿ�İ汾����ʱ���˷������Զ�ִ��*/
+	/**数据库的版本升级时，此方法会自动执行*/
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 	}
 	/**
-	 * �ж��Ƿ�������ݿ⣬�������ڵ�ʮ���������
+	 * 判断是否加入数据库，分数大于第十名，则加入
 	 */
 	public boolean isInsert(int score){
 		Cursor cursor =getNum10();
@@ -36,18 +36,17 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper{
 		}
 		return true;
 	}
-	
+
 	/**
-	 * ��ѯ���м�¼
+	 * 查询所有记录
 	 */
 	public Cursor getNum10(){
 		SQLiteDatabase database = getReadableDatabase();
 		String sql="select * from score_table order by score desc";
 		return database.rawQuery(sql, null);
 	}
-	
 	/**
-	 * ���뵽���ݿ�
+	 * 加入到数据库
 	 */
 	public void insert(String name,int score){
 		if(TextUtils.isEmpty(name)){

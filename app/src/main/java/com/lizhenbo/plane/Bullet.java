@@ -4,22 +4,22 @@ import com.lizhenbo.entity.FlyingObject;
 import com.lizhenbo.planewar.SplashActivity;
 
 /**
- * �ӵ�
+ * 子弹
  */
 public class Bullet extends FlyingObject {
 
-	private int speed = 20;// �ƶ��ٶ�
-	private boolean bomb;// �ӵ���״̬���Ƿ��Ѿ���ը
+	private int speed = 20;// 移动速度
+	private boolean bomb;// 子弹的状态，是否已经爆炸
 
 	/**
-	 * ���췽��
-	 * 
+	 * 构造方法
+	 *
 	 * @param type
-	 *            �ӵ������ͣ�1����һ���ӵ���2����˫������
+	 *            子弹的类型，1代表一个子弹，2代表双倍火力
 	 * @param x
-	 *            ս����ǰλ�����ĵ��λ��
+	 *            战机当前位置中心点的位置
 	 * @param y
-	 *            ս����ǰλ�����ĵ��λ��
+	 *            战机当前位置中心点的位置
 	 */
 	public Bullet(int type, int x, int y) {
 		if (type == 1) {// ��������
@@ -46,7 +46,7 @@ public class Bullet extends FlyingObject {
 	}
 
 	/**
-	 * �ƶ�һ��
+	 * 移动一步
 	 */
 	@Override
 	public void step() {
@@ -54,7 +54,7 @@ public class Bullet extends FlyingObject {
 	}
 
 	/**
-	 * �Ƿ�Խ��
+	 * 是否越界
 	 */
 	@Override
 	public boolean outOfBounds() {

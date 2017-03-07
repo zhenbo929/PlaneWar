@@ -8,8 +8,8 @@ import android.graphics.Paint;
 import com.lizhenbo.planewar.SplashActivity;
 
 /**
- * ��ͼʵ�ֵ�ͼ�ƶ�
- * @author anzhuo
+ * 地图实现地图移动
+ * @author LIZHENBO
  *
  */
 public class Map {
@@ -64,7 +64,7 @@ public class Map {
 		this.speed = speed;
 	}
 	/**
-	 * ��ǰͼƬ����
+	 * 当前图片绘制
 	 */
 	public void draw(Canvas canvas, Paint paint) {
 		if (bitmap != null) {
@@ -72,7 +72,7 @@ public class Map {
 		}
 	}
 	/**
-	 * �ƶ�һ��
+	 * 移动一步
 	 */
 	public void step() {
 		y += speed;
@@ -81,7 +81,7 @@ public class Map {
 		}
 	}
 	/**
-	 * �Ƿ�Խ��
+	 * 是否越界
 	 */
 	public boolean outOfBounds() {
 		return y > SplashActivity.HEIGHT;

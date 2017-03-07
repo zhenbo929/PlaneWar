@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import com.lizhenbo.entity.FlyingObject;
 
 /**
- * �����ɻ��ı�ը��3�ֵл���ս����
+ * 死亡飞机的爆炸（3种敌机和战机）
  */
 public class ToDoom {
 	private Bitmap[] booms = {};
@@ -53,7 +53,7 @@ public class ToDoom {
 	}
 
 	/**
-	 * ��ǰͼƬ����
+	 * 当前图片绘制
 	 */
 	public void draw(Canvas canvas, Paint paint) {
 		if (image_current != null) {

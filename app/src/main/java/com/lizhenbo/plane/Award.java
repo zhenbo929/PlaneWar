@@ -5,7 +5,7 @@ import com.lizhenbo.planewar.SplashActivity;
 
 
 /**
- * ������(���е�˫��������ը������)
+ * 奖励类(飞行的双倍火力和炸弹奖励)
  *
  */
 public class Award extends FlyingObject{

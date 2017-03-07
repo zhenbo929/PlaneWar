@@ -5,15 +5,15 @@ import com.lizhenbo.entity.IEnemy;
 import com.lizhenbo.planewar.SplashActivity;
 
 /**
- * �зɻ�
+ * 中飞机
  */
 public class BigPlane extends FlyingObject implements IEnemy {
 
-	private int speed;// �ƶ��ٶ�
-	private int life;// ��ɻ�������ֵ
+	private int speed;// 移动速度
+	private int life;// 大飞机的生命值
 
 	public BigPlane(int speedAdd) {
-		this.life = 4;// ��ɻ�������ֵ4
+		this.life = 4;// 大飞机的生命值4
 		this.image_current = SplashActivity.bitmap_enemy3_fly;
 		this.images_boom = SplashActivity.bitmap_enemy3_blowup;
 		this.width = image_current.getWidth();
@@ -24,7 +24,7 @@ public class BigPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * �õ�����
+	 * 得到分数
 	 */
 	@Override
 	public int getScore() {
@@ -32,7 +32,7 @@ public class BigPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * �Ƿ�Խ��
+	 * 是否越界
 	 */
 	@Override
 	public boolean outOfBounds() {
@@ -40,7 +40,7 @@ public class BigPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * �ƶ�һ��
+	 * 移动一步
 	 */
 	@Override
 	public void step() {
@@ -48,7 +48,7 @@ public class BigPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * ��д���౻���еķ����� ÿ�α���������ֵlife--
+	 * 重写父类被击中的方法， 每次被击中生命值life--
 	 */
 	@Override
 	public boolean shootBy(Bullet bullet) {

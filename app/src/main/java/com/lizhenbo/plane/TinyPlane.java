@@ -5,11 +5,11 @@ import com.lizhenbo.entity.IEnemy;
 import com.lizhenbo.planewar.SplashActivity;
 
 /**
- * С�ɻ�
+ * 小飞机
  */
 public class TinyPlane extends FlyingObject implements IEnemy {
 
-	private int speed;// �ƶ��ٶ�
+	private int speed;// 移动速度
 
 	public TinyPlane(int speedAdd) {
 		this.image_current = SplashActivity.bitmap_enemy1_fly;
@@ -18,11 +18,11 @@ public class TinyPlane extends FlyingObject implements IEnemy {
 		this.height = image_current.getHeight();
 		this.y = -height;
 		this.x = (int) (Math.random() * (SplashActivity.WIDTH - width));
-		this.speed = (int) (Math.random() * 3 + 1 + speedAdd);// ��ʼ���ٶ�[1,3]
+		this.speed = (int) (Math.random() * 3 + 1 + speedAdd);// 初始化速度[1,3]
 	}
 
 	/**
-	 * �õ�����
+	 * 得到分数
 	 */
 	@Override
 	public int getScore() {
@@ -30,7 +30,7 @@ public class TinyPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * �Ƿ�Խ��
+	 * 是否越界
 	 */
 	@Override
 	public boolean outOfBounds() {
@@ -38,7 +38,7 @@ public class TinyPlane extends FlyingObject implements IEnemy {
 	}
 
 	/**
-	 * �ƶ�һ��
+	 * 移动一步
 	 */
 	@Override
 	public void step() {

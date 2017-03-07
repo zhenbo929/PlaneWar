@@ -10,19 +10,19 @@ import com.lizhenbo.planewar.SplashActivity;
 import java.util.Random;
 
 /**
- * ��ɻ�
+ * 大飞机
  */
 public class BossPlane extends FlyingObject implements IEnemy, IAward {
 
 	private int speed = 1;
-	private int life;// ��boss������ֵ
+	private int life;// 大boss的生命值
 	private int awardType;
-	private Bitmap[] bitmap_enemy2_fly;// ����״̬��bitmap����
-	protected int index = 0;// ����״̬ʱ��ǰ��ͼƬ�������±�
+	private Bitmap[] bitmap_enemy2_fly;// 方向状态的bitmap数组
+	protected int index = 0;// 方向状态时当前的图片的数组下标
 
 	public BossPlane(int speedAdd) {
 		this.speed = this.speed + speedAdd / 4;
-		this.life = 8;// ��boss������ֵ8
+		this.life = 8;// 大boss的生命值8
 		this.bitmap_enemy2_fly = SplashActivity.bitmap_enemy2_fly;
 		this.image_current = bitmap_enemy2_fly[0];
 		this.images_boom = SplashActivity.bitmap_enemy2_blowup;
@@ -35,7 +35,7 @@ public class BossPlane extends FlyingObject implements IEnemy, IAward {
 	}
 
 	/**
-	 * ��ý���
+	 * 获得奖励
 	 */
 	@Override
 	public int getType() {
@@ -43,7 +43,7 @@ public class BossPlane extends FlyingObject implements IEnemy, IAward {
 	}
 
 	/**
-	 * �õ�����
+	 * 得到分数
 	 */
 	@Override
 	public int getScore() {
@@ -51,7 +51,7 @@ public class BossPlane extends FlyingObject implements IEnemy, IAward {
 	}
 
 	/**
-	 * �Ƿ�Խ��
+	 * 是否越界
 	 */
 	@Override
 	public boolean outOfBounds() {
@@ -59,7 +59,7 @@ public class BossPlane extends FlyingObject implements IEnemy, IAward {
 	}
 
 	/***
-	 * ����״̬��ÿ�ƶ�һ����Ҫ�ı䵱ǰͼƬ
+	 * 飞行状态是每移动一步还要改变当前图片
 	 */
 	@Override
 	public void step() { // �ƶ�
@@ -71,7 +71,7 @@ public class BossPlane extends FlyingObject implements IEnemy, IAward {
 	}
 
 	/**
-	 * ��д���౻���еķ����� ÿ�α���������ֵlife--
+	 * 重写父类被击中的方法， 每次被击中生命值life--
 	 */
 	@Override
 	public boolean shootBy(Bullet bullet) {
